@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading.pdb"
+  "CMakeFiles/shading.dir/Config.cpp.o"
+  "CMakeFiles/shading.dir/Config.cpp.o.d"
   "CMakeFiles/shading.dir/globject.cpp.o"
   "CMakeFiles/shading.dir/globject.cpp.o.d"
   "CMakeFiles/shading.dir/scene.cpp.o"

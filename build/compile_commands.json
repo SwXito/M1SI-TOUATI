@@ -103,19 +103,25 @@
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include  -std=gnu++11 -g -std=c++11 -Wall -o CMakeFiles/shading.dir/globject.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/Config.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp",
+  "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp",
+  "output": "src/CMakeFiles/shading.dir/Config.cpp.o"
+},
+{
+  "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/globject.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
   "output": "src/CMakeFiles/shading.dir/globject.cpp.o"
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include  -std=gnu++11 -g -std=c++11 -Wall -o CMakeFiles/shading.dir/scene.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/scene.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
   "output": "src/CMakeFiles/shading.dir/scene.cpp.o"
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include  -std=gnu++11 -g -std=c++11 -Wall -o CMakeFiles/shading.dir/visu.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/visu.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
   "output": "src/CMakeFiles/shading.dir/visu.cpp.o"
 }

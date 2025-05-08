@@ -185,7 +185,7 @@ third_party/glfw/CMakeFiles/uninstall.dir/clean:
 third_party/glfw/src/CMakeFiles/update_mappings.dir/all:
 	$(MAKE) $(MAKESILENT) -f third_party/glfw/src/CMakeFiles/update_mappings.dir/build.make third_party/glfw/src/CMakeFiles/update_mappings.dir/depend
 	$(MAKE) $(MAKESILENT) -f third_party/glfw/src/CMakeFiles/update_mappings.dir/build.make third_party/glfw/src/CMakeFiles/update_mappings.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=24 "Built target update_mappings"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=25 "Built target update_mappings"
 .PHONY : third_party/glfw/src/CMakeFiles/update_mappings.dir/all
 
 # Build rule for subdir invocation for target.
@@ -234,16 +234,16 @@ third_party/glfw/src/CMakeFiles/glfw.dir/clean:
 # Target rules for target src/CMakeFiles/shading.dir
 
 # All Build rule for target.
-src/CMakeFiles/shading.dir/all: third_party/glfw/src/CMakeFiles/glfw.dir/all
 src/CMakeFiles/shading.dir/all: CMakeFiles/glad.dir/all
+src/CMakeFiles/shading.dir/all: third_party/glfw/src/CMakeFiles/glfw.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=20,21,22,23 "Built target shading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=20,21,22,23,24 "Built target shading"
 .PHONY : src/CMakeFiles/shading.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/shading.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/shading.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/shading.dir/rule

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include
+CXX_INCLUDES = -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include
 
-CXX_FLAGS =  -std=gnu++11 -g -std=c++11 -Wall
+CXX_FLAGS = -g -std=c++17 -Wall -Wextra -pedantic
 

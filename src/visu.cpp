@@ -8,6 +8,9 @@
 
 #include "visu.hpp"
 #include "globject.hpp"
+#include <iostream>
+#include "Config.hpp"
+#include "FilePath.hpp"
 
 /* Window properties */
 static const unsigned int WINDOW_WIDTH = 1000;
@@ -199,68 +202,85 @@ void init() {
 	my_scene->createScene();
 }
 
+// int main(int argc, char** argv) {
+
+// 	if (argc != 1) {
+// 		std::cerr << "Wrong number of argument. Usage is simply : "<<argv[0]<<""<<std::endl;
+// 		exit(1);
+// 	}
+
+// 	/* GLFW initialisation */
+// 	GLFWwindow* window;
+// 	if (!glfwInit()) return -1;
+
+// 	/* Callback to a function if an error is rised by GLFW */
+// 	glfwSetErrorCallback(onError);
+
+//     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+//     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+//     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_FALSE);
+//     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+	
+
+// 	/* Create a windowed mode window and its OpenGL context */
+// 	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, NULL, NULL);
+// 	if (!window)
+// 	{
+// 		// If no context created : exit !
+// 		glfwTerminate();
+// 		return -1;
+// 	}
+
+// 	/* Make the window's context current */
+// 	glfwMakeContextCurrent(window);
+
+// 	gladLoadGL();
+	
+// 	glfwSetWindowSizeCallback(window,onWindowResized);
+// 	glfwSetKeyCallback(window, onKey);
+	
+// 	my_shader = ShaderManager::loadShader("../shaders/vx_shader.glsl","../shaders/fg_shader.glsl",true);
+// 	if (!my_shader) {
+// 		std::cerr<<"SHADER could not compile, see message before"<<std::endl;
+// 		exit(1);
+// 	} 
+// 	glUseProgram(my_shader);
+
+// 	init();
+// 	onWindowResized(window,WINDOW_WIDTH,WINDOW_HEIGHT);
+
+// 	while (!glfwWindowShouldClose(window))
+//     {
+// 		if (animate_world) global_time += STEP_TIME;
+// 		if (animate_light) global_light += STEP_TIME;
+//         // handle events
+
+//         // draw...
+// 		drawFunc();
+
+// 		/* Swap front and back buffers */
+// 		glfwSwapBuffers(window);
+
+// 		/* Poll for and process events */
+// 		glfwPollEvents();
+//     }
+
+// 	return 0;
+// }
+
 int main(int argc, char** argv) {
 
-	if (argc != 1) {
-		std::cerr << "Wrong number of argument. Usage is simply : "<<argv[0]<<""<<std::endl;
-		exit(1);
-	}
+    FilePath fp("../theTrain.json");
+    Config cfg;
+    if (!cfg.loadFromFile(fp)) return 1;
 
-	/* GLFW initialisation */
-	GLFWwindow* window;
-	if (!glfwInit()) return -1;
-
-	/* Callback to a function if an error is rised by GLFW */
-	glfwSetErrorCallback(onError);
-
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_FALSE);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
-	
-
-	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, NULL, NULL);
-	if (!window)
-	{
-		// If no context created : exit !
-		glfwTerminate();
-		return -1;
-	}
-
-	/* Make the window's context current */
-	glfwMakeContextCurrent(window);
-
-	gladLoadGL();
-	
-	glfwSetWindowSizeCallback(window,onWindowResized);
-	glfwSetKeyCallback(window, onKey);
-	
-	my_shader = ShaderManager::loadShader("../shaders/vx_shader.glsl","../shaders/fg_shader.glsl",true);
-	if (!my_shader) {
-		std::cerr<<"SHADER could not compile, see message before"<<std::endl;
-		exit(1);
-	} 
-	glUseProgram(my_shader);
-
-	init();
-	onWindowResized(window,WINDOW_WIDTH,WINDOW_HEIGHT);
-
-	while (!glfwWindowShouldClose(window))
-    {
-		if (animate_world) global_time += STEP_TIME;
-		if (animate_light) global_light += STEP_TIME;
-        // handle events
-
-        // draw...
-		drawFunc();
-
-		/* Swap front and back buffers */
-		glfwSwapBuffers(window);
-
-		/* Poll for and process events */
-		glfwPollEvents();
+    std::cout << "Grid size: " << cfg.grid.size << ", cellSize=" << cfg.grid.cellSize << "\n";
+    std::cout << "Origin: (" << cfg.origin.x << ", " << cfg.origin.y << ")\n";
+    std::cout << "Path: [";
+    for (size_t i = 0; i < cfg.path.size(); ++i) {
+        auto [c,r] = cfg.path[i];
+        std::cout << "(" << c << "," << r << ")" << (i+1<cfg.path.size()? ", ": "");
     }
-
-	return 0;
+    std::cout << "]\n";
+    return 0;
 }

@@ -69,10 +69,24 @@ include src/CMakeFiles/shading.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/shading.dir/flags.make
 
+src/CMakeFiles/shading.dir/Config.cpp.o: src/CMakeFiles/shading.dir/flags.make
+src/CMakeFiles/shading.dir/Config.cpp.o: /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp
+src/CMakeFiles/shading.dir/Config.cpp.o: src/CMakeFiles/shading.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/shading.dir/Config.cpp.o"
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/shading.dir/Config.cpp.o -MF CMakeFiles/shading.dir/Config.cpp.o.d -o CMakeFiles/shading.dir/Config.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp
+
+src/CMakeFiles/shading.dir/Config.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shading.dir/Config.cpp.i"
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp > CMakeFiles/shading.dir/Config.cpp.i
+
+src/CMakeFiles/shading.dir/Config.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shading.dir/Config.cpp.s"
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp -o CMakeFiles/shading.dir/Config.cpp.s
+
 src/CMakeFiles/shading.dir/globject.cpp.o: src/CMakeFiles/shading.dir/flags.make
 src/CMakeFiles/shading.dir/globject.cpp.o: /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp
 src/CMakeFiles/shading.dir/globject.cpp.o: src/CMakeFiles/shading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/shading.dir/globject.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/shading.dir/globject.cpp.o"
 	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/shading.dir/globject.cpp.o -MF CMakeFiles/shading.dir/globject.cpp.o.d -o CMakeFiles/shading.dir/globject.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp
 
 src/CMakeFiles/shading.dir/globject.cpp.i: cmake_force
@@ -86,7 +100,7 @@ src/CMakeFiles/shading.dir/globject.cpp.s: cmake_force
 src/CMakeFiles/shading.dir/scene.cpp.o: src/CMakeFiles/shading.dir/flags.make
 src/CMakeFiles/shading.dir/scene.cpp.o: /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp
 src/CMakeFiles/shading.dir/scene.cpp.o: src/CMakeFiles/shading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/shading.dir/scene.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/shading.dir/scene.cpp.o"
 	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/shading.dir/scene.cpp.o -MF CMakeFiles/shading.dir/scene.cpp.o.d -o CMakeFiles/shading.dir/scene.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp
 
 src/CMakeFiles/shading.dir/scene.cpp.i: cmake_force
@@ -100,7 +114,7 @@ src/CMakeFiles/shading.dir/scene.cpp.s: cmake_force
 src/CMakeFiles/shading.dir/visu.cpp.o: src/CMakeFiles/shading.dir/flags.make
 src/CMakeFiles/shading.dir/visu.cpp.o: /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp
 src/CMakeFiles/shading.dir/visu.cpp.o: src/CMakeFiles/shading.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/shading.dir/visu.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/shading.dir/visu.cpp.o"
 	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && /usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/shading.dir/visu.cpp.o -MF CMakeFiles/shading.dir/visu.cpp.o.d -o CMakeFiles/shading.dir/visu.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp
 
 src/CMakeFiles/shading.dir/visu.cpp.i: cmake_force
@@ -113,6 +127,7 @@ src/CMakeFiles/shading.dir/visu.cpp.s: cmake_force
 
 # Object files for target shading
 shading_OBJECTS = \
+"CMakeFiles/shading.dir/Config.cpp.o" \
 "CMakeFiles/shading.dir/globject.cpp.o" \
 "CMakeFiles/shading.dir/scene.cpp.o" \
 "CMakeFiles/shading.dir/visu.cpp.o"
@@ -120,6 +135,7 @@ shading_OBJECTS = \
 # External object files for target shading
 shading_EXTERNAL_OBJECTS =
 
+/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: src/CMakeFiles/shading.dir/Config.cpp.o
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: src/CMakeFiles/shading.dir/globject.cpp.o
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: src/CMakeFiles/shading.dir/scene.cpp.o
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: src/CMakeFiles/shading.dir/visu.cpp.o
@@ -132,7 +148,7 @@ shading_EXTERNAL_OBJECTS =
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/libm.so
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/libX11.so
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: src/CMakeFiles/shading.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading"
 	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/shading.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

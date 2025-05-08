@@ -175,6 +175,30 @@ shading/fast:
 	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/build
 .PHONY : shading/fast
 
+Config.o: Config.cpp.o
+.PHONY : Config.o
+
+# target to build an object file
+Config.cpp.o:
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/Config.cpp.o
+.PHONY : Config.cpp.o
+
+Config.i: Config.cpp.i
+.PHONY : Config.i
+
+# target to preprocess a source file
+Config.cpp.i:
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/Config.cpp.i
+.PHONY : Config.cpp.i
+
+Config.s: Config.cpp.s
+.PHONY : Config.s
+
+# target to generate assembly for a file
+Config.cpp.s:
+	cd /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/shading.dir/build.make src/CMakeFiles/shading.dir/Config.cpp.s
+.PHONY : Config.cpp.s
+
 globject.o: globject.cpp.o
 .PHONY : globject.o
 
@@ -260,6 +284,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... shading"
+	@echo "... Config.o"
+	@echo "... Config.i"
+	@echo "... Config.s"
 	@echo "... globject.o"
 	@echo "... globject.i"
 	@echo "... globject.s"

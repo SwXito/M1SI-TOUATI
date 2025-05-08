@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp" "src/CMakeFiles/shading.dir/Config.cpp.o" "gcc" "src/CMakeFiles/shading.dir/Config.cpp.o.d"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp" "src/CMakeFiles/shading.dir/globject.cpp.o" "gcc" "src/CMakeFiles/shading.dir/globject.cpp.o.d"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp" "src/CMakeFiles/shading.dir/scene.cpp.o" "gcc" "src/CMakeFiles/shading.dir/scene.cpp.o.d"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp" "src/CMakeFiles/shading.dir/visu.cpp.o" "gcc" "src/CMakeFiles/shading.dir/visu.cpp.o.d"
