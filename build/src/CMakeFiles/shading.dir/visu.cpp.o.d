@@ -206,6 +206,16 @@ src/CMakeFiles/shading.dir/visu.cpp.o: \
  /usr/include/c++/13/bits/vector.tcc \
  /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.hpp \
  /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/../third_party/glbasimac/glbasimac/glbi_convex_2D_shape.hpp \
+ /usr/include/c++/13/cassert /usr/include/assert.h \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/tools/mesh.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/tools/gl_tools.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/tools/globals.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/tools/vector3d.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/../third_party/glbasimac/tools/basic_mesh.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/../third_party/glbasimac/tools/mesh.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/../third_party/glbasimac/tools/indexed_mesh.hpp \
+ /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/../third_party/glbasimac/tools/globals.hpp \
  /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.hpp \
  /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/FilePath.hpp \
  /usr/include/nlohmann/json.hpp /usr/include/c++/13/algorithm \
@@ -261,8 +271,8 @@ src/CMakeFiles/shading.dir/visu.cpp.o: \
  /usr/include/nlohmann/detail/meta/detected.hpp \
  /usr/include/nlohmann/detail/meta/void_t.hpp \
  /usr/include/nlohmann/thirdparty/hedley/hedley.hpp \
- /usr/include/c++/13/version /usr/include/c++/13/cassert \
- /usr/include/assert.h /usr/include/nlohmann/detail/string_escape.hpp \
+ /usr/include/c++/13/version \
+ /usr/include/nlohmann/detail/string_escape.hpp \
  /usr/include/nlohmann/detail/input/position_t.hpp \
  /usr/include/nlohmann/detail/meta/cpp_future.hpp \
  /usr/include/nlohmann/detail/meta/type_traits.hpp \

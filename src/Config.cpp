@@ -33,3 +33,7 @@ bool Config::loadFromFile(const FilePath& filePath) {
     }
     return true;
 }
+
+const std::vector<std::pair<int, int>>& Config::getPath() const {
+    return path;
+}

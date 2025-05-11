@@ -158,6 +158,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -214,6 +215,19 @@ glfw/fast:
 .PHONY : glfw/fast
 
 #=============================================================================
+# Target rules for targets named glbasimac
+
+# Build rule for target.
+glbasimac: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glbasimac
+.PHONY : glbasimac
+
+# fast build rule for target.
+glbasimac/fast:
+	$(MAKE) $(MAKESILENT) -f third_party/glbasimac/CMakeFiles/glbasimac.dir/build.make third_party/glbasimac/CMakeFiles/glbasimac.dir/build
+.PHONY : glbasimac/fast
+
+#=============================================================================
 # Target rules for targets named shading
 
 # Build rule for target.
@@ -265,6 +279,7 @@ help:
 	@echo "... uninstall"
 	@echo "... update_mappings"
 	@echo "... glad"
+	@echo "... glbasimac"
 	@echo "... glfw"
 	@echo "... shading"
 	@echo "... third_party/glad/src/glad.o"
@@ -281,6 +296,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

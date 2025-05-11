@@ -144,6 +144,7 @@ shading_EXTERNAL_OBJECTS =
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/libGLX.so
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: third_party/glfw/src/libglfw3.a
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: libglad.a
+/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: third_party/glbasimac/libglbasimac.a
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/librt.a
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/libm.so
 /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/bin/shading: /usr/lib/x86_64-linux-gnu/libX11.so

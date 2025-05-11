@@ -7,13 +7,14 @@
 #include "shaders.hpp"
 #include "globject.hpp"
 #include "scene.hpp"
+#include "Config.hpp"
 
 #define MY_PI 3.141592653f
 
 
 #define STEP_TIME	0.32f
 #define STEP_ANGLE	MY_PI/90.0
-#define STEP_PROF	MY_PI/90.0
+#define STEP_PROF	MY_PI
 
 /* global variables for camera specifications */
 extern float profondeur;
@@ -29,4 +30,3 @@ extern bool animate_light;
 
 /* IHM Functions */
 void init();
-

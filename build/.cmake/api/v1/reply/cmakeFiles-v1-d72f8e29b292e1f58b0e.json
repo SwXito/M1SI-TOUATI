@@ -248,6 +248,9 @@
 			"path" : "third_party/glfw/src/CMakeLists.txt"
 		},
 		{
+			"path" : "third_party/glbasimac/CMakeLists.txt"
+		},
+		{
 			"path" : "src/CMakeLists.txt"
 		}
 	],

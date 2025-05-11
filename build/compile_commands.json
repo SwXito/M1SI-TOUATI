@@ -1,7 +1,7 @@
 [
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build",
-  "command": "/usr/bin/gcc  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -g -o CMakeFiles/glad.dir/third_party/glad/src/glad.c.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/src/glad.c",
+  "command": "/usr/bin/gcc  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -g -o CMakeFiles/glad.dir/third_party/glad/src/glad.c.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/src/glad.c",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/src/glad.c",
   "output": "CMakeFiles/glad.dir/third_party/glad/src/glad.c.o"
 },
@@ -102,26 +102,50 @@
   "output": "third_party/glfw/src/CMakeFiles/glfw.dir/linux_joystick.c.o"
 },
 {
+  "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glbasimac",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/glbasimac -g -std=c++17 -Wall -Wextra -o CMakeFiles/glbasimac.dir/src/glbi_convex_2D_shape.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_convex_2D_shape.cpp",
+  "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_convex_2D_shape.cpp",
+  "output": "third_party/glbasimac/CMakeFiles/glbasimac.dir/src/glbi_convex_2D_shape.cpp.o"
+},
+{
+  "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glbasimac",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/glbasimac -g -std=c++17 -Wall -Wextra -o CMakeFiles/glbasimac.dir/src/glbi_engine.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_engine.cpp",
+  "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_engine.cpp",
+  "output": "third_party/glbasimac/CMakeFiles/glbasimac.dir/src/glbi_engine.cpp.o"
+},
+{
+  "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glbasimac",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/glbasimac -g -std=c++17 -Wall -Wextra -o CMakeFiles/glbasimac.dir/src/glbi_set_of_points.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_set_of_points.cpp",
+  "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_set_of_points.cpp",
+  "output": "third_party/glbasimac/CMakeFiles/glbasimac.dir/src/glbi_set_of_points.cpp.o"
+},
+{
+  "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glbasimac",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/glbasimac -g -std=c++17 -Wall -Wextra -o CMakeFiles/glbasimac.dir/src/glbi_texture.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_texture.cpp",
+  "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/src/glbi_texture.cpp",
+  "output": "third_party/glbasimac/CMakeFiles/glbasimac.dir/src/glbi_texture.cpp.o"
+},
+{
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/Config.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/Config.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/Config.cpp",
   "output": "src/CMakeFiles/shading.dir/Config.cpp.o"
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/globject.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/globject.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/globject.cpp",
   "output": "src/CMakeFiles/shading.dir/globject.cpp.o"
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/scene.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/scene.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/scene.cpp",
   "output": "src/CMakeFiles/shading.dir/scene.cpp.o"
 },
 {
   "directory": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src",
-  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/visu.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
+  "command": "/usr/bin/g++  -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/. -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/json -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/../glbasimac -g -std=c++17 -Wall -Wextra -pedantic -o CMakeFiles/shading.dir/visu.cpp.o -c /home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
   "file": "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/visu.cpp",
   "output": "src/CMakeFiles/shading.dir/visu.cpp.o"
 }

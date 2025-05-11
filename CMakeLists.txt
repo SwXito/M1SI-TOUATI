@@ -31,6 +31,12 @@ add_library(glad third_party/glad/src/glad.c)
 include_directories(third_party/glad/include)
 set(ALL_LIBRARIES ${ALL_LIBRARIES} glad)
 
+# ---Add glbasimac---
+add_subdirectory(third_party/glbasimac)
+set(ALL_LIBRARIES ${ALL_LIBRARIES} glbasimac)
+include_directories(third_party/glbasimac/)
+set(CMAKE_COLOR_MAKEFILE ON)
+
 include_directories(.)
 
 add_subdirectory(src)

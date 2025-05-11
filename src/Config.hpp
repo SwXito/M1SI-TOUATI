@@ -25,4 +25,5 @@ public:
 
     // Charge la configuration depuis un fichier JSON
     bool loadFromFile(const FilePath& filePath);
+    const std::vector<std::pair<int, int>>& getPath() const;
 };

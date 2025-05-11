@@ -8,14 +8,11 @@
 
 #include "visu.hpp"
 #include "globject.hpp"
-#include <iostream>
-#include "Config.hpp"
-#include "FilePath.hpp"
 
 /* Window properties */
 static const unsigned int WINDOW_WIDTH = 1000;
 static const unsigned int WINDOW_HEIGHT = 1000;
-static const char WINDOW_TITLE[] = "Programme for Simple Shading";
+static const char WINDOW_TITLE[] = "The Train";
 
 /* global variables for camera specifications */
 float profondeur;
@@ -46,7 +43,7 @@ void onWindowResized(GLFWwindow* /* window */, int width, int height)
 	/* construction de la matrice de projection */
 	glMatrixMode(GL_PROJECTION);
 	float mat[16];
-	computePerspectiveMatrix(mat,60.0,h,0.01,10.0);// Angle de vue, rapport largeur/hauteur, near, far
+	computePerspectiveMatrix(mat,60.0,h,0.01,100.0);// Angle de vue, rapport largeur/hauteur, near, far
 	glLoadMatrixf(mat);
 
 	/* Retour a la pile de matrice Modelview
@@ -106,7 +103,7 @@ void onKey(GLFWwindow* window, int key, int /* scancode */, int action, int /* m
 
 /*********************************************************/
 /* fonction de dessin de la scène à l'écran              */
-static void drawFunc(void) { 
+static void drawFunc(const std::vector<std::pair<int, int>>& path) { 
 	/* reinitialisation des buffers : couleur et ZBuffer */
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -167,7 +164,7 @@ static void drawFunc(void) {
 	glUniform3fv(glGetUniformLocation(my_shader,"light_world_position"),1,position);
 
 	/* Debut du dessin */
-	my_scene->drawScene(global_time);
+	my_scene->drawScene(path);
 	/* Fin du dessin */
 	glPopMatrix();
 	glDisable(GL_LIGHTING);
@@ -202,85 +199,64 @@ void init() {
 	my_scene->createScene();
 }
 
-// int main(int argc, char** argv) {
-
-// 	if (argc != 1) {
-// 		std::cerr << "Wrong number of argument. Usage is simply : "<<argv[0]<<""<<std::endl;
-// 		exit(1);
-// 	}
-
-// 	/* GLFW initialisation */
-// 	GLFWwindow* window;
-// 	if (!glfwInit()) return -1;
-
-// 	/* Callback to a function if an error is rised by GLFW */
-// 	glfwSetErrorCallback(onError);
-
-//     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-//     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-//     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_FALSE);
-//     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
-	
-
-// 	/* Create a windowed mode window and its OpenGL context */
-// 	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, NULL, NULL);
-// 	if (!window)
-// 	{
-// 		// If no context created : exit !
-// 		glfwTerminate();
-// 		return -1;
-// 	}
-
-// 	/* Make the window's context current */
-// 	glfwMakeContextCurrent(window);
-
-// 	gladLoadGL();
-	
-// 	glfwSetWindowSizeCallback(window,onWindowResized);
-// 	glfwSetKeyCallback(window, onKey);
-	
-// 	my_shader = ShaderManager::loadShader("../shaders/vx_shader.glsl","../shaders/fg_shader.glsl",true);
-// 	if (!my_shader) {
-// 		std::cerr<<"SHADER could not compile, see message before"<<std::endl;
-// 		exit(1);
-// 	} 
-// 	glUseProgram(my_shader);
-
-// 	init();
-// 	onWindowResized(window,WINDOW_WIDTH,WINDOW_HEIGHT);
-
-// 	while (!glfwWindowShouldClose(window))
-//     {
-// 		if (animate_world) global_time += STEP_TIME;
-// 		if (animate_light) global_light += STEP_TIME;
-//         // handle events
-
-//         // draw...
-// 		drawFunc();
-
-// 		/* Swap front and back buffers */
-// 		glfwSwapBuffers(window);
-
-// 		/* Poll for and process events */
-// 		glfwPollEvents();
-//     }
-
-// 	return 0;
-// }
-
 int main(int argc, char** argv) {
 
-    FilePath fp("../theTrain.json");
-    Config cfg;
-    if (!cfg.loadFromFile(fp)) return 1;
+	if (argc != 2) {
+		std::cerr << "Wrong number of argument. Usage is simply : "<<argv[0]<<""<<std::endl;
+		exit(1);
+	}
 
-    std::cout << "Grid size: " << cfg.grid.size << ", cellSize=" << cfg.grid.cellSize << "\n";
-    std::cout << "Origin: (" << cfg.origin.x << ", " << cfg.origin.y << ")\n";
-    std::cout << "Path: [";
-    for (size_t i = 0; i < cfg.path.size(); ++i) {
-        auto [c,r] = cfg.path[i];
-        std::cout << "(" << c << "," << r << ")" << (i+1<cfg.path.size()? ", ": "");
+	/* GLFW initialisation */
+	GLFWwindow* window;
+	if (!glfwInit()) return -1;
+
+	/* Callback to a function if an error is rised by GLFW */
+	glfwSetErrorCallback(onError);
+
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_FALSE);
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_COMPAT_PROFILE);
+	
+
+	/* Create a windowed mode window and its OpenGL context */
+	window = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE, NULL, NULL);
+	if (!window)
+	{
+		// If no context created : exit !
+		glfwTerminate();
+		return -1;
+	}
+
+	/* Make the window's context current */
+	glfwMakeContextCurrent(window);
+
+	gladLoadGL();
+	
+	glfwSetWindowSizeCallback(window,onWindowResized);
+	glfwSetKeyCallback(window, onKey);
+
+	auto config = Config{};
+	config.loadFromFile(argv[1]);
+	const auto& path = config.getPath();
+	init();
+	onWindowResized(window,WINDOW_WIDTH,WINDOW_HEIGHT);
+
+	while (!glfwWindowShouldClose(window))
+    {
+		if (animate_world) global_time += STEP_TIME;
+		if (animate_light) global_light += STEP_TIME;
+        // handle events
+
+        // draw...
+		drawFunc(path);
+
+		/* Swap front and back buffers */
+		glfwSwapBuffers(window);
+
+		/* Poll for and process events */
+		glfwPollEvents();
     }
-    std::cout << "]\n";
-    return 0;
+
+	return 0;
 }

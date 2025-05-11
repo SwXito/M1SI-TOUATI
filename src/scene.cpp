@@ -1,10 +1,19 @@
 #include "scene.hpp"
 #include "visu.hpp"
+#include <cmath>
 
-void Scene::addOneObject(unsigned int typ_obj,float* diffuse,float* trans,
-                         float rot,int typ_rot,float scale) {
-    les_objets.push_back(new GLObject(typ_obj,diffuse));
-    for(unsigned int i=0;i<3;i++) {translations.push_back(trans[i]);}
+Scene::Scene(): nb_object(0), railCube(nullptr), innerCurve(nullptr), outerCurve(nullptr) {}
+Scene::~Scene() {
+    for (auto obj : les_objets) delete obj;
+    for (auto b : balasts) delete b;
+    for (auto t : traverses) delete t;
+    delete railCube; delete innerCurve; delete outerCurve;
+}
+
+void Scene::addOneObject(unsigned int typ_obj, float* diffuse, float* trans,
+                         float rot, int typ_rot, float scale) {
+    les_objets.push_back(new GLObject(typ_obj, diffuse));
+    translations.insert(translations.end(), trans, trans + 3);
     rotation_angles.push_back(rot);
     rotation_axes.push_back(typ_rot);
     scales.push_back(scale);
@@ -12,67 +21,88 @@ void Scene::addOneObject(unsigned int typ_obj,float* diffuse,float* trans,
 }
 
 void Scene::createScene() {
-    float tr1[3] = {0.0f,-1.0f,0.0f};
-    float col1[3] = {1.0f,1.0f,1.0f};
-    addOneObject(QUAD,col1,tr1,0.0,2,10.0);
+    // Sol
+    float tr1[3] = {0.0f, -1.0f, 0.0f}; float col1[3] = {0.8f,0.8f,0.8f};
+    addOneObject(QUAD, col1, tr1, 0.0f, 2, 10.0f);
 
-    float tr2[3] = {2.0f,0.0f,0.0f};
-    float col2[3] = {1.0f,1.0f,0.0f};
-    addOneObject(SPHERE,col2,tr2,0.0,2,0.5);
+    // Balasts
+    for (int i = 0; i < NUM_BALASTS; ++i)
+        balasts.push_back(basicCylinder(BALAST_HEIGHT, BALAST_RADIUS));
 
-    float tr3[3] = {1.0f,0.0f,0.0f};
-    float col3[3] = {0.0f,0.8f,0.2f};
-    addOneObject(CUBE,col3,tr3,0.0,2,0.25);
+    // Traverses (cubes échelonnés)
+    for (int i = 0; i < NUM_TRAVERSES; ++i)
+        traverses.push_back(basicCube(1.0f));
+
+    // Raft
+    railCube = basicCube(1.0f);
+
+    // Courbes rails
+    const int segments = 36;
+    innerCurve = new GLBI_Convex_2D_Shape(2);
+    std::vector<float> coords;
+    for (int i = 0; i <= segments; ++i) {
+        float ang = (M_PI_2/segments)*i;
+        coords.push_back(POS_X_RAIL1*cosf(ang)); coords.push_back(POS_X_RAIL1*sinf(ang));
+    }
+    innerCurve->initShape(coords); innerCurve->changeNature(GL_LINE_STRIP);
+    coords.clear();
+    outerCurve = new GLBI_Convex_2D_Shape(2);
+    for (int i = 0; i <= segments; ++i) {
+        float ang = (M_PI_2/segments)*i;
+        coords.push_back(POS_X_RAIL2*cosf(ang)); coords.push_back(POS_X_RAIL2*sinf(ang));
+    }
+    outerCurve->initShape(coords); outerCurve->changeNature(GL_LINE_STRIP);
 }
 
-void Scene::makeRot(int trot,float arot) {
-    if(trot==1) {
-        // Axe X
-        glRotatef(arot,1.0,0.0,0.0);
-    }
-    else if (trot==2) {
-        glRotatef(arot,0.0,1.0,0.0);
-    }
-    else {
-        glRotatef(arot,0.0,0.0,1.0);
-    }
+void Scene::makeRot(int trot, float arot) {
+    if (trot==1) glRotatef(arot,1,0,0);
+    else if (trot==2) glRotatef(arot,0,1,0);
+    else glRotatef(arot,0,0,1);
 }
 
-void Scene::drawScene(float cur_time) {
+void Scene::createStraightRail(){
     glPushMatrix();
-
-    // Le sol
-    int i = 0;
-    glPushMatrix();
-        glTranslatef(translations[3*i],translations[3*i+1],translations[3*i+2]);
-        makeRot(rotation_axes[i],rotation_angles[i]);
-        glScalef(scales[i],scales[i],scales[i]);
-        les_objets[i]->glDrawObject();
+    makeRot(1,90.0f);
+    float mid = (BALAST_START_X + BALAST_END_X)*0.5f;
+    glTranslatef(mid,0.2f,-0.1f);
+    for (int i=0;i<NUM_BALASTS;++i) {
+        glPushMatrix();
+        float x = BALAST_START_X + i*BALAST_SPACING - mid;
+        glTranslatef(x,0,0);
+        balasts[i]->createVAO(); balasts[i]->draw();
+        glPopMatrix();
+    }
     glPopMatrix();
-    
-    i++;
-    // La planete 
+
     glPushMatrix();
-        makeRot(2,cur_time);
-        glTranslatef(translations[3*i],translations[3*i+1],translations[3*i+2]);
+    makeRot(2, 90.0f);
+    glTranslatef(-(RAIL_SR * REEL_CELL_SIZE + POS_X_RAIL1 * REEL_CELL_SIZE / CELL_SIZE), RAIL_HEIGHT / 2, mid);
+    const int TI[2] = {1,3};
+    for (int k=0;k<2;++k) {
         glPushMatrix();
-            makeRot(rotation_axes[i],rotation_angles[i]);
-            glScalef(scales[i],scales[i],scales[i]);
-            les_objets[i]->glDrawObject();
+        float x = BALAST_START_X + TI[k]*BALAST_SPACING - mid;
+        glTranslatef(x,0,0);
+        glScalef(TRAV_WIDTH,TRAV_THICK,BALAST_SPACING*(NUM_BALASTS-1)+RAIL_SR*2);
+        traverses[k]->createVAO(); 
+        traverses[k]->draw();
         glPopMatrix();
-        i++;
-        glPushMatrix();
-            makeRot(2,-7*cur_time);
-            glTranslatef(translations[3*i],translations[3*i+1],translations[3*i+2]);
-            glPushMatrix();
-                makeRot(rotation_axes[i],rotation_angles[i]-0*cur_time);
-                glScalef(scales[i],scales[i],scales[i]);
-                les_objets[i]->glDrawObject();
-            glPopMatrix();
-        glPopMatrix();
-    glPopMatrix();    
-    
-	glPopMatrix();
+    }
+    glPopMatrix();
 }
 
+void Scene::drawScene(const std::vector<std::pair<int, int>>& path) {
 
+    //Le sol
+    glPushMatrix();
+    makeRot(rotation_axes[0],rotation_angles[0]);
+    glScalef(scales[0] * 3.0, scales[0] * 3.0, scales[0] * 3.0); les_objets[0]->glDrawObject();
+    glPopMatrix();
+
+    for(const auto& [x, y]: path){
+        glPushMatrix();
+        glTranslatef(float(x)* REEL_CELL_SIZE, 0, float(y)* REEL_CELL_SIZE);
+        createStraightRail();
+        glPopMatrix();
+    }
+
+}

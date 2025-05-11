@@ -4,7 +4,7 @@
 # compile C with /usr/bin/gcc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/.
+C_INCLUDES = -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glad/include -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac -I/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/.
 
 C_FLAGS = -g
 

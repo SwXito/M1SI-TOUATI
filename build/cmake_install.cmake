@@ -45,6 +45,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glfw/cmake_install.cmake")
+  include("/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/third_party/glbasimac/cmake_install.cmake")
   include("/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/build/src/cmake_install.cmake")
 
 endif()

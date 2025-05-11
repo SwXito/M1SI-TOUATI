@@ -11,8 +11,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "CMakeFiles/VerifyGlobs.cmake"
+  "CMakeFiles/cmake.verify_globs"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/CMakeLists.txt"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/src/helpers/RootDir.hpp.in"
+  "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glbasimac/CMakeLists.txt"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/CMakeLists.txt"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/cmake_uninstall.cmake.in"
   "/home/dams/Documents/COURS/M1/image/M1SI-TOUATI/third_party/glfw/src/CMakeLists.txt"
@@ -71,6 +74,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "third_party/glfw/cmake_uninstall.cmake"
   "third_party/glfw/CMakeFiles/CMakeDirectoryInformation.cmake"
   "third_party/glfw/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "third_party/glbasimac/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
@@ -80,5 +84,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "third_party/glfw/CMakeFiles/uninstall.dir/DependInfo.cmake"
   "third_party/glfw/src/CMakeFiles/update_mappings.dir/DependInfo.cmake"
   "third_party/glfw/src/CMakeFiles/glfw.dir/DependInfo.cmake"
+  "third_party/glbasimac/CMakeFiles/glbasimac.dir/DependInfo.cmake"
   "src/CMakeFiles/shading.dir/DependInfo.cmake"
   )
