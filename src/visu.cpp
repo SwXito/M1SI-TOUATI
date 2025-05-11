@@ -52,8 +52,6 @@ void onWindowResized(GLFWwindow* /* window */, int width, int height)
 	glLoadIdentity();
 }
 
-/*********************************************************/
-/* IHM : Key Event Handling                              */
 void onKey(GLFWwindow* window, int key, int /* scancode */, int action, int /* mods */)
 {
 	int is_pressed = (action == GLFW_PRESS); 
